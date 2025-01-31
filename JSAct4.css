@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to blue gradient */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+#dateForm {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 1.1em;
+    color: #2c3e50; /* Dark blue */
+    margin-bottom: 10px;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    input[type="date"]:focus {
+        border-color: #6a11cb; /* Purple */
+        box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+        outline: none;
+    }
+
+button {
+    background: #6a11cb; /* Purple */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+    button:hover {
+        background: #2575fc; /* Blue on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+    }
+
+/* Result Styles */
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #2c3e50; /* Dark blue */
+    text-align: center;
+    font-weight: bold;
+}
+/* Go Back Button Styles */
+.go-back-button {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px;
+    background: #6a11cb; /* Purple */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+    .go-back-button:hover {
+        background: #2575fc; /* Blue on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+    }

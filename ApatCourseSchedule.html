@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Term Course Schedule</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Go Back Button */
+        .go-back-button {
+            display: block;
+            margin: 0 auto 20px; /* Center the button and add space below */
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+            width: fit-content;
+        }
+
+            .go-back-button:hover {
+                background: #2980b9;
+            }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+
+        td {
+            color: #333;
+            font-size: 1em;
+            height: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+            td:hover {
+                background-color: #ecf0f1;
+            }
+
+            /* Highlight Classes */
+            td b {
+                color: #e74c3c;
+                font-size: 1.1em;
+            }
+
+        /* Row Striping for Better Readability */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Hover Effect on Rows */
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            th,
+            td {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Go Back Button -->
+    <a href="assignment.html">
+        <button class="go-back-button">Go Back</button>
+    </a>
+
+    <h1>Weekly Time Table</h1>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+        <tr>
+            <th>7:00am</th>
+            <td></td>
+            <td rowspan="2"><b>MATH022 <br> R412</b></td>
+            <td></td>
+            <td rowspan="2"><b>MATH022 <br> R412</b></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>8:15am</th>
+            <td></td>
+            <td></td>
+            <td rowspan="3"><b>IT103<br> R411</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>9:30am</th>
+            <td></td>
+            <td rowspan="3"><b>PE012<br> A406-B</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>10:45am</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>12:00pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>1:15pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>2:30pm</th>
+            <td></td>
+            <td></td>
+            <td rowspan="4"><b>IT103L <br>R604</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>3:45pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>5:00pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>6:15pm</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>

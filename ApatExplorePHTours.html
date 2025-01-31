@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore PH Tours Landing Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+            a:hover {
+                color: #2980b9;
+            }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 3em;
+            }
+
+            header p {
+                font-size: 1.2em;
+                margin-top: 10px;
+            }
+
+            header img {
+                width: 100px;
+                margin-top: 20px;
+            }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+            nav ul li a {
+                color: white;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+
+                nav ul li a:hover {
+                    text-decoration: underline;
+                }
+
+        /* Go Back Button */
+        .go-back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+            width: fit-content;
+        }
+
+            .go-back-button:hover {
+                background: #c0392b;
+            }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+            main h2 {
+                font-size: 2em;
+                margin-top: 30px;
+                color: #3498db;
+            }
+
+            main ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                main ul li {
+                    background: #ecf0f1;
+                    margin: 10px 0;
+                    padding: 15px;
+                    border-radius: 5px;
+                    font-size: 1.1em;
+                }
+
+                    main ul li:hover {
+                        background: #bdc3c7;
+                    }
+
+        /* Button */
+        button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+            button:hover {
+                background: #c0392b;
+            }
+
+        /* Branches Section */
+        section {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+            section h2 {
+                color: #3498db;
+            }
+
+            section ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                section ul li {
+                    margin: 10px 0;
+                    font-size: 1.1em;
+                }
+
+        /* Footer */
+        footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+            footer ul {
+                list-style: none;
+                padding: 0;
+                margin: 10px 0;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+                footer ul li a {
+                    color: white;
+                    font-size: 1.1em;
+                }
+
+                    footer ul li a:hover {
+                        color: #3498db;
+                    }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            main {
+                padding: 10px;
+            }
+        }
+
+        .logo {
+            width: 200px; /* Adjust as needed */
+            height: auto; /* Maintains aspect ratio */
+            margin-top: 20px; /* Adds space above the logo */
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Promos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Go Back Button -->
+        <a href="index.html">
+            <button class="go-back-button">Go Back to Home</button>
+        </a>
+        <h1>Explore PH Tours</h1>
+        <img src="logo_intl.jpg" alt="Company Logo" class="logo">
+        <p>Your Gateway to the Philippines!</p>
+    </header>
+    <main>
+        <h2>Our Services</h2>
+        <p>Our services are gateways to relaxation!</p>
+        <ul>
+            <li>Island Hopping Tours</li>
+            <li>Guided City Tours</li>
+            <li>Mountain Trekking Packages</li>
+            <li>Hotel and Transport Reservations</li>
+            <li>Customized Travel Itineraries</li>
+        </ul>
+        <h2>Special Promos</h2>
+        <p>Take advantage of our exclusive offers!</p>
+        <ul>
+            <li>"3+1" Group Packages</li>
+            <li>20% Discount on Bookings Made at Least a Month in Advance</li>
+            <li>Special Weekend Rates for Island Hopping in Cebu</li>
+        </ul>
+        <h2>Popular Packages</h2>
+        <ul>
+            <li>Manila: Historic Intramuros Tour with Food Crawl</li>
+            <li>Cebu: Whale Shark Watching and Kawasan Falls Adventure</li>
+            <li>Davao: Mt. Apo Climbing Experience</li>
+        </ul>
+        <h2>Book Your Next Adventure Today!</h2>
+        <p>Explore the Philippines like never before with our exciting packages. Limited slots available for promo deals. Don't miss out!</p>
+        <button>Book Now!</button>
+    </main>
+    <section>
+        <h2>Branches</h2>
+        <ul>
+            <li><strong>Manila</strong> | (+63)123-4567</li>
+            <li><strong>Cebu</strong> | (+63)234-5678</li>
+            <li><strong>Davao</strong> | (+63)345-6789</li>
+        </ul>
+    </section>
+    <footer>
+        <p>2024 Explore PH Tours. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

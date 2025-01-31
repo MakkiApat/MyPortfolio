@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        /* Input and Button Styles */
+        #taskInput {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        #addTaskButton {
+            padding: 10px 20px;
+            background: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+            #addTaskButton:hover {
+                background: #ff3b2f;
+            }
+
+            #addTaskButton:disabled {
+                background: #ccc;
+                cursor: not-allowed;
+            }
+
+        /* Task List Styles */
+        #taskList {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+            #taskList li {
+                background: rgba(255, 255, 255, 0.9);
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+                #taskList li button {
+                    background: #ff6f61;
+                    color: #fff;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+                }
+
+                    #taskList li button:hover {
+                        background: #ff3b2f;
+                    }
+
+        /* Go Back Button Styles */
+        .go-back-button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+            margin-top: 20px; /* Space above the button */
+        }
+
+            .go-back-button:hover {
+                background: #2980b9;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <p>Enter a task and click "Add Task" to add it to your to-do list (Max 3 tasks):</p>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button id="addTaskButton">Add Task</button>
+        <h2>Your Tasks:</h2>
+        <ul id="taskList"></ul>
+
+        <!-- Go Back Button -->
+        <a href="index.html">
+            <button class="go-back-button">Go Back to Home</button>
+        </a>
+    </div>
+
+    <script>
+        const taskInput = document.getElementById('taskInput');
+        const addTaskButton = document.getElementById('addTaskButton');
+        const taskList = document.getElementById('taskList');
+
+        // Function to update the "Add Task" button state
+        function updateAddButtonState() {
+            if (taskList.children.length >= 3) {
+                addTaskButton.disabled = true; // Disable button if there are 3 tasks
+            } else {
+                addTaskButton.disabled = false; // Enable button if there are fewer than 3 tasks
+            }
+        }
+
+        // Function to add a new task
+        function addTask() {
+            if (taskInput.value.trim() !== '') {
+                if (taskList.children.length < 3) {
+                    // Create a new list item
+                    const li = document.createElement('li');
+                    li.textContent = taskInput.value;
+
+                    // Add a delete button
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.addEventListener('click', function () {
+                        taskList.removeChild(li);
+                        updateAddButtonState(); // Re-enable the "Add Task" button after deletion
+                    });
+
+                    li.appendChild(deleteButton);
+                    taskList.appendChild(li);
+
+                    // Clear the input field
+                    taskInput.value = '';
+
+                    // Update the button state
+                    updateAddButtonState();
+                } else {
+                    alert('You can only have 3 tasks at a time. Please delete a task to add a new one.');
+                }
+            } else {
+                alert('Please enter a task!');
+            }
+        }
+
+        // Event listener for the "Add Task" button
+        addTaskButton.addEventListener('click', addTask);
+
+        // Initial button state
+        updateAddButtonState();
+    </script>
+</body>
+
+</html>

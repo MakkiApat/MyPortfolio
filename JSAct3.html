@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form Styles */
+        #passwordForm {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+            input[type="password"]:focus {
+                border-color: #6a11cb;
+                outline: none;
+            }
+
+        button[type="submit"] {
+            background: #6a11cb;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+            button[type="submit"]:hover {
+                background: #2575fc;
+            }
+
+        /* Message Styles */
+        #message {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Animation for Message */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* Go Back Button Container */
+        .go-back-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .go-back-button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+
+            .go-back-button:hover {
+                background: #2980b9;
+            }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Change Password</h1>
+        <form id="passwordForm">
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <br><br>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <!-- Go Back Button -->
+    <div class="go-back-container">
+        <a href="index.html">
+            <button class="go-back-button">Go Back to Home</button>
+        </a>
+    </div>
+
+    <script>
+        const passwordForm = document.getElementById('passwordForm');
+        const newPassword = document.getElementById('newPassword');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const message = document.getElementById('message');
+
+        passwordForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Clear previous message
+            message.textContent = '';
+            message.classList.remove('fade-in');
+
+            // Validate passwords
+            if (newPassword.value === confirmPassword.value) {
+                if (newPassword.value.length >= 8) {
+                    message.textContent = 'Password changed successfully!';
+                    message.style.color = '#4CAF50'; // Green for success
+                } else {
+                    message.textContent = 'Password must be at least 8 characters long.';
+                    message.style.color = '#f44336'; // Red for error
+                }
+            } else {
+                message.textContent = 'Passwords do not match.';
+                message.style.color = '#f44336'; // Red for error
+            }
+
+            // Add fade-in animation
+            message.classList.add('fade-in');
+        });
+    </script>
+</body>
+
+</html>

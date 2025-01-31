@@ -1,0 +1,99 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav ul li a:hover {
+                text-decoration: underline;
+            }
+
+/* Assignment List Section */
+#assignment-list {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    #assignment-list h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+    }
+
+    #assignment-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        #assignment-list ul li {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #333;
+            transition: background-color 0.3s ease;
+        }
+
+            #assignment-list ul li:hover {
+                background-color: #e0e0e0;
+            }
+
+            #assignment-list ul li a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                display: block;
+            }
+
+                #assignment-list ul li a:hover {
+                    color: #007BFF;
+                }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
